@@ -194,8 +194,18 @@ ABCは楽譜の表示のみです。音声再生は含みません。
 - 強制ダーク化する拡張機能などによって、アプリの配色が上書きされることがあります。
 - モバイルの2ペインは上下分割です。境界のドラッグ調整はデスクトップ向けです。
 
-## ビルド
-JavaScript・CSS・KaTeXの数式フォントを埋め込んだhtmlファイルによって構成されているマス。
+## 開発・ビルド
+
+この節は、ビルド用ソース一式を配置している場合の手順です。配布用の`yohaku.html`を使うだけなら、Node.jsやnpmは不要です。
+
+開発時はNode.js 22とnpmを使用しています。
+
+```sh
+npm ci
+node build.mjs
+```
+
+ビルドにより、JavaScript・CSS・KaTeXの数式フォントを埋め込んだ`yohaku.html`を生成します。
 
 | ファイル | 用途 |
 | --- | --- |
@@ -219,3 +229,13 @@ JavaScript・CSS・KaTeXの数式フォントを埋め込んだhtmlファイル�
 | abcjs | ABC記譜法の描画 |
 | DOMPurify | HTML・SVGの安全化 |
 | esbuild | JavaScriptのバンドル |
+
+## ライセンスについて
+
+両忘のアプリ本体は、[MIT License](LICENSE)のもとで公開しています。
+
+Copyright (c) 2026 Hideki KAWAGUCHI（川口秀樹、GitHub: xin1zu2zhai1）
+
+ライセンスの全文は、リポジトリー内の[LICENSE](LICENSE)を参照してください。
+
+同梱する各ライブラリーおよびフォントには、それぞれのライセンスが適用されます。再配布時は、各ライセンスの条件と必要な著作権表示を確認してください。
