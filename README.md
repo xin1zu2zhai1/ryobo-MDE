@@ -217,16 +217,7 @@ ABCは楽譜の表示のみです。音声再生は含みません。
 
 ## 開発・ビルド
 
-この節は、ビルド用ソース一式を配置している場合の手順です。配布用の`yohaku.html`を使うだけなら、Node.jsやnpmは不要です。
-
 開発時はNode.js 22とnpmを使用しています。
-
-```sh
-npm ci
-node build.mjs
-```
-
-ビルドにより、JavaScript・CSS・KaTeXの数式フォントを埋め込んだ`yohaku.html`を生成します。
 
 | ファイル | 用途 |
 | --- | --- |
@@ -237,7 +228,6 @@ node build.mjs
 | `color-guard.css` | テーマと表示調整 |
 | `build.mjs` | 単一HTMLへのビルド |
 | `package.json`／`package-lock.json` | 開発用依存関係 |
-| `yohaku.html` | 配布用HTML |
 
 ### 主な使用ライブラリー
 
